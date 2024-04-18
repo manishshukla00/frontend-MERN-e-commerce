@@ -63,7 +63,7 @@ const CartPage = () => {
                   <Image
                     className="mt-4"
                     width={200}
-                    src={`http://localhost:8080/api/v1/product/product-photo/${elem._id}`}
+                    src={`https://e-commerce-backend-gn5p.onrender.com/api/v1/product/product-photo/${elem._id}`}
                     alt="Product Image"
                     fluid
                   />
