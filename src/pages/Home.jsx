@@ -33,7 +33,7 @@ const Home = ({ description, keywords, author, title }) => {
   const fetchImageData = async (productId) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/product/product-photo/${productId}`,
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/product-photo/${productId}`,
         {
           responseType: "blob",
           headers: {
@@ -51,7 +51,7 @@ const Home = ({ description, keywords, author, title }) => {
   const allProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/all-products",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/product/all-products",
         {
           headers: {
             Authorization: auth?.token,
@@ -79,7 +79,7 @@ const Home = ({ description, keywords, author, title }) => {
   const allCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/v1/category/all-category"
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/category/all-category"
       );
       setCategories(res.data.categories);
     } catch (error) {
@@ -106,7 +106,7 @@ const Home = ({ description, keywords, author, title }) => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/product/product-filter",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/product/product-filter",
         { checked, radio }
       );
       setProductItems(data?.products);
