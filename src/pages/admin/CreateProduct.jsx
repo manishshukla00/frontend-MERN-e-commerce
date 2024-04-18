@@ -23,7 +23,7 @@ const CreateProduct = () => {
   const allCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/v1/category/all-category"
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/category/all-category"
       );
       setCategories(res.data.categories);
     } catch (error) {
@@ -74,7 +74,7 @@ const CreateProduct = () => {
   //       productData.append("photo", formData.photo);
   //     }
   //     const { data } = axios.post(
-  //       "http://localhost:8080/api/v1/product/create-product",
+  //       "https://e-commerce-backend-gn5p.onrender.com/api/v1/product/create-product",
   //       productData,
   //       { headers: { Authorization: auth?.token } }
   //     );
@@ -129,7 +129,7 @@ const CreateProduct = () => {
 
       // Make the request with axios
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/product/create-product",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/product/create-product",
         productData,
         {
           headers: {
