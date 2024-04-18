@@ -14,7 +14,7 @@ const Products = () => {
   const fetchImageData = async (productId) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/product/product-photo/${productId}`,
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/product-photo/${productId}`,
         {
           responseType: "blob",
           headers: {
@@ -33,7 +33,7 @@ const Products = () => {
   const allProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/product/all-products",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/product/all-products",
         {
           headers: {
             Authorization: auth?.token,
@@ -65,7 +65,7 @@ const Products = () => {
       let answer = window.prompt("Are you sure want to delete product?");
       if (answer === "yes") {
         const { data } = await axios.delete(
-          `http://localhost:8080/api/v1/product/delete-product/${id}`
+          `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/delete-product/${id}`
         );
         if (data) {
           toast.success(data.message);
