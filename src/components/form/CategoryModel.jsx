@@ -16,7 +16,7 @@ function CategoryModel({ resData, allCategories }) {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/category/update-category/${resData._id}`,
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/category/update-category/${resData._id}`,
         { name: update },
         { headers: { Authorization: auth?.token } }
       );
