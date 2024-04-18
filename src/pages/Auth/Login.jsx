@@ -24,7 +24,7 @@ function Login() {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/login",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/auth/login",
         formData
       );
       console.log(res.data);
