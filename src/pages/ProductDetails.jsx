@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
     } catch (error) {
@@ -29,7 +29,7 @@ const ProductDetails = () => {
           <Image
             className="mt-4"
             width={800}
-            src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+            src={`https://e-commerce-backend-gn5p.onrender.com/api/v1/product/product-photo/${product._id}`}
             alt="Product Image"
             fluid
           />
