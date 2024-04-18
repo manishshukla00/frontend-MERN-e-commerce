@@ -27,7 +27,7 @@ function Register() {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/register",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/auth/register",
         formData
       );
       if (res.status === 200) {
