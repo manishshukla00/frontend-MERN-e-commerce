@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/auth/forgot-password",
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/auth/forgot-password",
         formData
       );
       console.log(res.data);
