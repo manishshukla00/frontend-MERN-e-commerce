@@ -28,7 +28,7 @@ const UpdateProducts = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/get-product/${params.slug}`
       );
       if (data) {
         setProduct(data.product);
@@ -43,7 +43,7 @@ const UpdateProducts = () => {
   const allCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/v1/category/all-category"
+        "https://e-commerce-backend-gn5p.onrender.com/api/v1/category/all-category"
       );
       setCategories(res.data.categories);
     } catch (error) {
@@ -92,7 +92,7 @@ const UpdateProducts = () => {
 
       // Make the request with axios
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/product/update-product/${id}`,
+        `https://e-commerce-backend-gn5p.onrender.com/api/v1/product/update-product/${id}`,
         productData,
         {
           headers: {
