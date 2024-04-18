@@ -1,0 +1,36 @@
+.Home {
+    min-height: 70vh;
+    padding: 20px;
+  }
+  
+  .filter-section {
+    padding-right: 20px;
+  }
+  
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+  }
+
+  .card {
+    min-height: 450px; /* Adjust based on your content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This helps in aligning the action buttons at the bottom */
+  }
+  
+  .card-img-top {
+    height: 400px; /* Fixed height for images */
+    object-fit: cover; /* Keeps the aspect ratio, and covers the area without stretching */
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      min-height: 400px; /* Smaller height for smaller devices */
+    }
+  
+    .card-img-top {
+      height: 200px; /* Adjust image height for smaller devices */
+    }
+  }

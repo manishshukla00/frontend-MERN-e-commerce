@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px gray;
+    border-bottom: solid gray;
+}
+
+.nav-link {
+    font-weight: 400 !important;
+}
+
+.footer {
+    color: white;
+    padding: 25px;
+    background: linear-gradient(to right, #434343, #000000);
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.footer a:hover{
+    color: #ffefba;
+    border-bottom: 1px solid #ffefba;
+    font-size: large;
+}
